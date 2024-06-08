@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block body %}
+<section class="about-us">
+  <div class="about">
+    <!-- <img src="image_linkedIn.jpeg" class="pic" /> -->
+    <img
+      src="{{ url_for('static', filename='image_test.jpeg') }}"
+      class="pic"
+    />
+    <div class="text">
+      <h2>About Me</h2>
+      <h5>Backend Developer & <span>Data Scientist</span></h5>
+      <p>
+        Eager Data Scientist and Backend engineer with a Love for Finance: I'm someone who loves
+        playing with data to discover meaningful insights. Finance, stock
+        markets, and economics are my jam - I find them super interesting! I'm
+        not only dedicated and passionate about my work, but I'm also a team
+        player who loves working together to achieve great things.
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock body %}
