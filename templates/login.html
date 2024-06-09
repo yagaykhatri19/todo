@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TODO</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/favicon_io/favicon-16x16.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Assistant:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/style1.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <section class="login" id="login">
+      <div class="head">
+        <h1 class="company">TODO by Yagay Khatri</h1>
+      </div>
+      <p class="msg">Welcome back</p>
+      <div class="form">
+        <form action="/login", method="POST">
+          <input
+            type="text"
+            placeholder="Email"
+            class="text"
+            id="username"
+            name = 'email'
+            required
+          /><br />
+          <input
+            type="password"
+            placeholder="••••••••••••••"
+            class="password"
+            name = 'password'
+            required
+          /><br />
+          <button class="btn-login" id="do-login">Login</button>
+          <a href="/register" class="forgot">Register</a>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

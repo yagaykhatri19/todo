@@ -64,7 +64,13 @@
               <a class="nav-link" href="/about">About</a>
             </li>
           </ul>
-          <form class="d-flex" role="search" action="/search" method="post">
+          <form
+            class="d-flex mx-auto"
+            style="width: 50%"
+            role="search"
+            action="/search"
+            method="post"
+          >
             <input type="hidden" name="action" value="search_todo" />
             <input
               class="form-control me-2"
@@ -77,6 +83,16 @@
               Search
             </button>
           </form>
+          <div class="d-flex ms-auto align-items-center">
+            {% if session.name %}
+              <span class="navbar-text mx-3">Hey {{ session.name }}</span>
+            {% endif %}
+            <form action="/logout" method="post">
+              <button class="btn btn-dark btn-sm" type="submit">
+                <i class="fa-solid fa-right-from-bracket"></i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </nav>
