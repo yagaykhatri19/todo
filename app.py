@@ -70,7 +70,10 @@ def about():
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():
-    search_query = request.form['search']
+    search_query = request.form['search'].strip()
+    if not search_query:
+        # If the search query is empty, return a message or redirect
+        return render_template('search.html', allTodo=[])
     # print(search_query)
     todo = TODO.query.filter(TODO.title.contains(search_query) | TODO.content.contains(search_query)).all()
     return render_template('search.html', allTodo=todo)
